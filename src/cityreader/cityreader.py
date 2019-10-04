@@ -6,8 +6,8 @@ class City():
     self.lat = lat
     self.lon = lon
 
-  # def __repr__(self):
-  #   return (f'The city of {self.name} is at {self.lat}, {self.lon}')
+  def __repr__(self):
+    return (f'The city of {self.name} is at {self.lat}, {self.lon}')
 
   # def __repr__(self):
   #   return (f'{self.name}, {self.lat}, {self.lon}')  
@@ -36,7 +36,7 @@ def cityreader(cities=[]):
       next(csv_reader, None) 
       for row in csv_reader:
         # print(row[0])
-        cities.append(City(row[0], row[3], row[4]))
+        cities.append(City(row[0], float(row[3]), float(row[4])))
 
     return cities
 
