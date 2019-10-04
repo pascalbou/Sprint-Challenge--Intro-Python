@@ -26,8 +26,6 @@ class Motorcycle(GroundVehicle):
     def drive():
         return 'BRAAAP!!'
 
-# TODO
-
 
 vehicles = [
     GroundVehicle(),
@@ -39,4 +37,5 @@ vehicles = [
 
 # Go through the vehicles list and print the result of calling drive() on each.
 
-# TODO
+for vehicle in vehicles:
+    print(vehicle.drive())
